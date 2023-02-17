@@ -22,23 +22,25 @@
           <h4 class="header-title">FRECUENCIA OBTENIDA</h4>
         <div class="header-content">
           <div class="container grid-2">
-            <div class="column">
+            <div class="column"  *ngFor="let t of tarea2">
           
-                <br /><br />
-               <h2>Nombre de usuario:</h2>  
-                <input class="resultados" style="border: 2px solid #ccc; padding: 10px; 
-                font-size: 18px; width: 300px; height: 30px;" type="text" name="name" /><br /><br />
-                <h2>Pulso por minuto:</h2>   
-                <input class="resultados" style="border: 2px solid #ccc; padding: 10px; 
-                font-size: 18px; width: 300px; height: 30px;" type="text" name="pulses" /><br /><br />
-                <h2>Nivel de riesgo:</h2>   
-                <input class="resultados" style="border: 2px solid #ccc; padding: 10px; 
-                font-size: 18px; width: 300px; height: 30px;" type="text" name="risk" />
-            
+              <br /><br />
+           <h2>Nombre de usuario:</h2>  
+            <input class="resultados" value={{t.cantpulsaciones}} style="border: 2px solid #ccc; padding: 10px; 
+            font-size: 18px; width: 300px; height: 30px;" type="text" name="name"/>  
+ 
+            <br /><br />
+            <h2>Pulso por minuto:</h2>   
+            <input class="resultados" value={{t.fechademedicion}} style="border: 2px solid #ccc; padding: 10px; 
+            font-size: 18px; width: 300px; height: 30px;" type="text" name="pulses" /><br /><br />
+            <h2>Nivel de riesgo:</h2>   
+            <input class="resultados" value={{t.riesgoDeInfarto}} style="border: 2px solid #ccc; padding: 10px; 
+            font-size: 18px; width: 300px; height: 30px;" type="text" name="risk" />
+        
             </div>  
           </div>
         </div>
       </header>
     </main> 
   </body>
-  
+   

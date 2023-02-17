@@ -13,6 +13,7 @@
         <div class="login-html">
             <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Ingreso</label>
             <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registro</label>
+   
             <div class="login-form">
                 <div class="sign-in-htm">
                     <div class="group">
@@ -30,47 +31,61 @@
                     
                 </div>
                 <div class="sign-up-htm">
+                    <form [formGroup]="pacienteForm" (ngSubmit)="enviarciente()">
                     <div class="group">
                         <label for="user" class="label">Nombre</label>
+                        <input id="user" type="text"   class="input">
+                    </div>
+                    <div class="group">
+                        <label for="user" class="label">Apellido</label>
                         <input id="user" type="text" class="input">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Apellido</label>
-                        <input id="pass" type="password" class="input" data-type="password">
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">Edad</label>
-                        <input id="pass" type="password" class="input" data-type="password">
+                        <label for="user" class="label">Edad</label>
+                        <input id="user" type="text" class="input">
                     </div> 
                     <div class="group">
                         <label for="user" class="label">Genero</label>
+                        <input id="user" type="text"  class="input">
+                    </div>
+                    <div class="group">
+                        <label for="user" class="label">Numero de telefono</label>
+                        <input id="user" type="text"   class="input">
+                    </div> 
+                    <div class="group">
+                        <label for="user" class="label">Altura</label>
                         <input id="user" type="text" class="input">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Numero de telefono</label>
-                        <input id="pass" type="password" class="input" data-type="password">
-                    </div> 
-
+                        <label for="user" class="label">Peso</label>
+                        <input id="user" type="text"    class="input">
+                    </div>
+                    <div class="group">
+                        <label for="user" class="label">Grupo Sanguineo</label>
+                        <input id="user" type="text"   class="input">
+                    </div>
 
                     <div class="group">
                         <label for="user" class="label">Nombre de usuario</label>
-                        <input id="user" type="text" class="input">
+                        <input id="user" type="text" formControlName="nombreUsuario"  class="input">
                     </div>
                     <div class="group">
                         <label for="pass" class="label">Contraseña</label>
-                        <input id="pass" type="password" class="input" data-type="password">
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">Repetir contraseña</label>
-                        <input id="pass" type="password" class="input" data-type="password">
+                        <input id="pass" type="password" formControlName="clave"  class="input" data-type="password">
                     </div> 
+                    <div class="group">
+                        <label for="user" class="label">Tipo de usuario</label>
+                        <input id="user" type="text" formControlName="tipodeusuario"  class="input">
+                    </div>
+
                     <div class="group">
                         <input type="submit" class="button" value="Registrarse">
                     </div>
                     <div class="hr"></div>
-                
+                </form>
                 </div>
             </div>
+    
         </div>
     </div>
       <script src="registro.component.js"></script>

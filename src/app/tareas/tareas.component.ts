@@ -21,7 +21,7 @@ export class TareasComponent implements OnInit {
      ngOnInit(): void {
          this.tareaForm=this.fb.group({
           id:['',Validators.required],
-          nombredeusuario:['',Validators.required],
+          nombreUsuario:['',Validators.required],
           clave:['',Validators.required],
           tipodeusuario:['',Validators.required] 
          });;
