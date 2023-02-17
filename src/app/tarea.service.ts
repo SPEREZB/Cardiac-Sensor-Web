@@ -17,19 +17,24 @@ export class TareaService {
   private apipulso= 'https://sensortdd4iots-production.up.railway.app/frecuenciacardiaca/all';
   private apipersona= 'https://sensortdd4iots-production.up.railway.app/persona';
   private apipaciente= 'https://sensortdd4iots-production.up.railway.app/paciente';
+  private apipacienteget= 'http://localhost:8080/';
   constructor(
     private http:HttpClient
   ) { }
 
-  public gettarea():Observable<any>{
+//get
+public gettarea():Observable<any>{
     return this.http.get(this.api);
  }
 
- public getpulso():Observable<any>{
+public getpulso():Observable<any>{
   return this.http.get(this.apipulso);
 }
+public getpaciente():Observable<any>{
+  return this.http.get(this.apipacienteget+"paciente/all");
+}
  
-//agreg
+//post
  public postusuario(body:any):Observable<any>{
   return this.http.post(this.api,body);
 }

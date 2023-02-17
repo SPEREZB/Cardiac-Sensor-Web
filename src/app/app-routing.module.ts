@@ -1,3 +1,4 @@
+import { DiagnosticosComponent } from './diagnosticos/diagnosticos.component';
 import { TareasComponent } from './tareas/tareas.component';
  
 import { NgModule } from '@angular/core';
@@ -12,7 +13,7 @@ const routes: Routes = [
   {path:"", redirectTo:"/ingreso",pathMatch:"full"},  
   {path:"ingreso",component:IngresoComponent},
   {path:"medirfc",component:MedirfrecuenciaComponent},
-  {path:"data",component:TareasComponent},
+  {path:"diagnosticos",component:DiagnosticosComponent},
   {path:"inicio",component:InicioComponent} 
 ];
 

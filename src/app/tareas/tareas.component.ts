@@ -8,9 +8,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./tareas.component.css']
 })
 export class TareasComponent implements OnInit {
- 
   title="TAREAS";
   tareaForm: FormGroup;
+  tareaForm2: FormGroup;
   tarea:any;  
 
   constructor(

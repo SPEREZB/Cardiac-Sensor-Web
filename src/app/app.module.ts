@@ -1,3 +1,5 @@
+import { DiagnosticosComponent } from './diagnosticos/diagnosticos.component';
+ 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
@@ -12,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { IngresoComponent } from './ingreso/ingreso.component'; 
 import { InicioComponent } from './inicio/inicio.component';
-import { MedirfrecuenciaComponent } from './medirfrecuencia/medirfrecuencia.component';
+import { MedirfrecuenciaComponent } from './medirfrecuencia/medirfrecuencia.component'; 
 
  
 
@@ -22,7 +24,8 @@ import { MedirfrecuenciaComponent } from './medirfrecuencia/medirfrecuencia.comp
     TareasComponent, 
     IngresoComponent,
     MedirfrecuenciaComponent,
-    InicioComponent 
+    InicioComponent,
+    DiagnosticosComponent
   ],
   imports: [
     BrowserModule,
