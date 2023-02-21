@@ -13,25 +13,22 @@ export interface Message{
 
 export class TareaService {  
   
-  private api= 'https://sensortdd4iots-production.up.railway.app/usuario';
-  private apipulso= 'https://sensortdd4iots-production.up.railway.app/frecuenciacardiaca/all';
-  private apipersona= 'https://sensortdd4iots-production.up.railway.app/persona';
-  private apipaciente= 'https://sensortdd4iots-production.up.railway.app/paciente';
-  private apipacienteget= 'http://localhost:8080/';
+  private api= 'https://sensortdd4iots-production.up.railway.app/'; 
+  private api2= 'http://localhost:8080/usuario/VerificarUsuarios/';  
   constructor(
     private http:HttpClient
   ) { }
 
 //get
-public gettarea():Observable<any>{
-    return this.http.get(this.api);
+public getusuario():Observable<any>{
+    return this.http.get(this.api+"usuario/all");
  }
 
 public getpulso():Observable<any>{
-  return this.http.get(this.apipulso);
+  return this.http.get(this.api+"frecuenciacardiaca/all");
 }
 public getpaciente():Observable<any>{
-  return this.http.get(this.apipacienteget+"paciente/all");
+  return this.http.get(this.api+"paciente/all");
 }
  
 //post
@@ -39,10 +36,12 @@ public getpaciente():Observable<any>{
   return this.http.post(this.api,body);
 }
 public postpersona(body:any):Observable<any>{
-  return this.http.post(this.apipersona,body);
+  return this.http.post(this.api+"persona",body);
 }
 public postpaciente(body:any):Observable<any>{
-  return this.http.post(this.apipaciente,body);
+  return this.http.post(this.api+"paciente",body);
+} 
+public verifiusuario(body:any):Observable<any>{
+  return this.http.post<string>(this.api2,body);
 }
-
-}
+} 

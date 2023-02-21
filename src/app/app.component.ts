@@ -8,5 +8,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent{
-  title = 'Sensor_Cardiaco';
+  title = 'Sensor_Cardiaco'; 
+  showTemplate = false;
+ 
+
+  toggleTemplate() {
+    this.showTemplate = !this.showTemplate;
+ }
+ 
 }

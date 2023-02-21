@@ -18,19 +18,6 @@ export class TareasComponent implements OnInit {
     public ta: TareaService 
   ){}
   
-     ngOnInit(): void {
-         this.tareaForm=this.fb.group({
-          id:['',Validators.required],
-          nombreUsuario:['',Validators.required],
-          clave:['',Validators.required],
-          tipodeusuario:['',Validators.required] 
-         });;
-
-         this.ta.gettarea().subscribe(tareaapi=>{  
-          console.log('tareas', tareaapi);
-          this.tarea= tareaapi;
-          console.log(this.tarea);
-        }, )
- 
+     ngOnInit(): void {  
      }  
 }

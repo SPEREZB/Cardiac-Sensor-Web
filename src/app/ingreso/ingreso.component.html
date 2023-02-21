@@ -1,96 +1,133 @@
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous" ></script>
-    <link rel="stylesheet" href="ingreso.component.css" /> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="ingreso.component.css" />
 </head>
 
+<body style="background-color: white">
+  <div class="login-wrap column-1">
+    <div class="login-html">
+      <input id="tab-1" type="radio" name="tab" class="sign-in" checked /><label
+        for="tab-1"
+        class="tab"
+        >Ingreso</label
+      >
+      <input id="tab-2" type="radio" name="tab" class="sign-up" /><label
+        for="tab-2"
+        class="tab"
+        >Registro</label
+      >
 
-<body style="background-color: white;">
-    <div class="login-wrap column-1">
-        <div class="login-html">
-            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Ingreso</label>
-            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registro</label>
-   
-            <div class="login-form">
-                <div class="sign-in-htm">
-                    <div class="group">
-                        <label for="user" class="label">Nombre de usuario</label>
-                        <input id="user" type="text" class="input">
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">Contraseña</label>
-                        <input id="pass" type="password" class="input" data-type="password">
-                    </div> 
-                    <div class="group group--bottom">
-                        <input type="submit" class="button" value="Ingresar">
-                    </div>
-                    <div class="hr"></div>
-                    
-                </div>
-                <div class="sign-up-htm">
-                    <form [formGroup]="pacienteForm" (ngSubmit)="enviarciente()">
-                    <div class="group">
-                        <label for="user" class="label">Nombre</label>
-                        <input id="user" type="text"   class="input">
-                    </div>
-                    <div class="group">
-                        <label for="user" class="label">Apellido</label>
-                        <input id="user" type="text" class="input">
-                    </div>
-                    <div class="group">
-                        <label for="user" class="label">Edad</label>
-                        <input id="user" type="text" class="input">
-                    </div> 
-                    <div class="group">
-                        <label for="user" class="label">Genero</label>
-                        <input id="user" type="text"  class="input">
-                    </div>
-                    <div class="group">
-                        <label for="user" class="label">Numero de telefono</label>
-                        <input id="user" type="text"   class="input">
-                    </div> 
-                    <div class="group">
-                        <label for="user" class="label">Altura</label>
-                        <input id="user" type="text" class="input">
-                    </div>
-                    <div class="group">
-                        <label for="user" class="label">Peso</label>
-                        <input id="user" type="text"    class="input">
-                    </div>
-                    <div class="group">
-                        <label for="user" class="label">Grupo Sanguineo</label>
-                        <input id="user" type="text"   class="input">
-                    </div>
-
-                    <div class="group">
-                        <label for="user" class="label">Nombre de usuario</label>
-                        <input id="user" type="text" formControlName="nombreUsuario"  class="input">
-                    </div>
-                    <div class="group">
-                        <label for="pass" class="label">Contraseña</label>
-                        <input id="pass" type="password" formControlName="clave"  class="input" data-type="password">
-                    </div> 
-                    <div class="group">
-                        <label for="user" class="label">Tipo de usuario</label>
-                        <input id="user" type="text" formControlName="tipodeusuario"  class="input">
-                    </div>
-
-                    <div class="group">
-                        <input type="submit" class="button" value="Registrarse">
-                    </div>
-                    <div class="hr"></div>
-                </form>
-                </div>
-            </div>
-    
-        </div>
-    </div>
-      <script src="registro.component.js"></script>
-</body>
+      <div class="login-form">
  
-<footer style="background-color: white;">
+        <div class="sign-in-htm">
+           <form [formGroup]="verifiusuarioForm" (ngSubmit)="verifiusuario()">
+          <div class="group">
+            <label for="user" class="label" >Nombre de usuario</label>
+            <input id="user" type="text" formControlName="nombreusuario" class="input" />
+          </div>
+          <div class="group">
+            <label for="pass" class="label">Contraseña</label>
+            <input
+              id="pass"
+              type="password"
+              class="input"
+              data-type="password" formControlName="clave"
+            />
+          </div>
+          <div class="group group--bottom">
+            <input type="submit" class="button" value="Ingresar" />
+          </div>
+          <div class="hr"></div>
+        </form>
+        </div>
+        <div class="sign-up-htm">
+          <form [formGroup]="pacienteForm" (ngSubmit)="enviarpaciente()">
+            <div class="container">
+              <div class="row">
+                <div class="col-4" style="margin-right: 70px">
+                  <div class="group">
+                    <label for="user" class="label">Nombre</label>
+                    <input id="user" type="text" class="input" />
+                  </div>
+                  <div class="group">
+                    <label for="user" class="label">Apellido</label>
+                    <input id="user" type="text" class="input" />
+                  </div>
+                  <div class="group">
+                    <label for="user" class="label">Edad</label>
+                    <input id="user" type="text" class="input" />
+                  </div>
+                  <div class="group">
+                    <label for="user" class="label">Genero</label>
+                    <input id="user" type="text" class="input" />
+                  </div>
+                  <div class="group">
+                    <label for="user" class="label">Numero de telefono</label>
+                    <input id="user" type="text" class="input" />
+                  </div>
+                </div>
 
-</footer>
+                <div class="col-4">
+                  <div class="group">
+                    <label for="user" class="label">Altura</label>
+                    <input id="user" type="text" class="input" />
+                  </div>
+                  <div class="group">
+                    <label for="user" class="label">Peso</label>
+                    <input id="user" type="text" class="input" />
+                  </div>
+                  <div class="group">
+                    <label for="user" class="label">Grupo Sanguineo</label>
+                    <input id="user" type="text" class="input" />
+                  </div>
+                </div>
+
+                <div class="group">
+                  <label for="user" class="label">Nombre de usuario</label>
+                  <input
+                    id="user"
+                    type="text"
+                    formControlName="nombreUsuario"
+                    class="input"
+                  />
+                </div>
+                <div class="group">
+                  <label for="pass" class="label">Contraseña</label>
+                  <input
+                    id="pass"
+                    type="password"
+                    formControlName="clave"
+                    class="input"
+                    data-type="password"
+                  />
+                </div>
+                <div class="group">
+                  <label for="user" class="label">Tipo de usuario</label>
+                  <input
+                    id="user"
+                    type="text"
+                    formControlName="tipodeusuario"
+                    class="input"
+                  />
+                </div>
+
+                <div class="group">
+                  <input type="submit" class="button" value="Registrarse" />
+                </div>
+                <div class="hr"></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="registro.component.js"></script>
+</body>
+
+<footer style="background-color: white"></footer>
