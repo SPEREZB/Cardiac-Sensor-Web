@@ -4,6 +4,17 @@ body{
 	background:#c8c8c8;
 	font:600 16px/18px 'Open Sans',sans-serif;
 }
+
+
+select{
+	size: 50px;
+	width: 130px;
+	height: 40px;
+	font-size: 20px; 
+	padding: 10px;
+	border-radius:25px;
+	background-color: #11bcb1;
+}
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}
 .clearfix:after{clear:both;display:block}

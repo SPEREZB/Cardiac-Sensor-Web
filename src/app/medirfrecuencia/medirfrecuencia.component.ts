@@ -13,6 +13,7 @@ export class MedirfrecuenciaComponent implements OnInit {
   tareaForm: FormGroup;
   tarea:any;  
   audio:any; 
+  arr:any
   constructor(
     public fb:FormBuilder,
     public ta: TareaService 
@@ -23,18 +24,17 @@ export class MedirfrecuenciaComponent implements OnInit {
           id:['',Validators.required],
           cantpulsaciones:['',Validators.required],
           fechademedicion:['',Validators.required],
-          riesgodeinfarto:['',Validators.required] 
+          riesgoDeInfarto:['',Validators.required] 
          });;
  
 
-        this.ta.getpulso().subscribe(pulsoapi=>{  
-          console.log('tareas', pulsoapi);
-          this.tarea= pulsoapi;
-          console.log(this.tarea);
+        this.ta.getpulso().subscribe(pulsoapi=>{   
+          this.tarea= pulsoapi; 
+          this.arr = Object.values(this.tarea); 
+        
         }, )
 
-        this.ta.getpaciente().subscribe(pulsoapi=>{  
-          console.log('tareas', pulsoapi);
+        this.ta.getpaciente().subscribe(pulsoapi=>{   
           this.audio= pulsoapi;
           console.log(this.audio);
         }, )

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
- 
+import { Component, OnInit } from '@angular/core'; 
+import { TareaService } from './tarea.service';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +8,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AppComponent{
   title = 'Sensor_Cardiaco'; 
-  showTemplate = false;
- 
+  showTemplate: boolean;
 
+  constructor(private servicio: TareaService) {}
+   get():any
+   {
+    this.showTemplate = this.servicio.getShowTemplate();
+   }
+  /*
   toggleTemplate() {
     this.showTemplate = !this.showTemplate;
- }
+ }*/
  
 }

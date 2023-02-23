@@ -21,53 +21,27 @@
       <h4 class="header-title">FRECUENCIA OBTENIDA</h4>
       <div class="header-content">
         <div class="container grid-2">
-          <div class="column" *ngFor="let t of tarea">
+          <h2 style="position: relative; left: 280px; top: 200px;">ID:</h2>
+          <h2 style="position: absolute; left: 600px; top: 350px;">Pulsaciones por segundo:</h2>
+          <h2 style="position: relative; left: 270px; top: 330px;">Fecha:</h2>
+          <h2 style="position: relative; left: 270px; top: 370px;">Riesgo de infarto:</h2>
+          <div class="column" *ngFor="let t of arr">
             <br /><br />
-            <h2>Pulsaciones por minuto:</h2>
+          
             <input
               class="resultados"
-              value="{{ t.cantpulsaciones }}"
+              value="{{ t }}"
               style="
                 border: 2px solid #ccc;
                 padding: 10px;
                 font-size: 18px;
-                width: 300px;
+                width: 260px;
                 height: 30px;
               "
               type="text"
               name="name"
             />
-
-            <br /><br />
-            <h2>Fecha de medicion:</h2>
-            <input
-              class="resultados"
-              value="{{ t.fechademedicion }}"
-              style="
-                border: 2px solid #ccc;
-                padding: 10px;
-                font-size: 18px;
-                width: 300px;
-                height: 30px;
-              "
-              type="text"
-              name="pulses"
-            /><br /><br />
-            <h2>Nivel de riesgo:</h2>
-            <input
-              class="resultados"
-              value="{{ t.riesgoDeInfarto }}"
-              style="
-                border: 2px solid #ccc;
-                padding: 10px;
-                font-size: 18px;
-                width: 300px;
-                height: 30px;
-              "
-              type="text"
-              name="risk"
-            /><br /><br />
-
+ 
           
           </div>
 

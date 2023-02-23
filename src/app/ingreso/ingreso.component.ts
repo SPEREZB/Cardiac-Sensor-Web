@@ -1,8 +1,8 @@
+import { AppComponent } from './../app.component';
 import { Component, OnInit } from '@angular/core';
 import { TareaService } from '../tarea.service';
 import { FormBuilder, FormGroup, Validators  } from '@angular/forms';
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core'; 
 @Component({
   selector: 'app-ingreso',
   templateUrl: './ingreso.component.html',
@@ -24,13 +24,12 @@ export class IngresoComponent implements OnInit {
   constructor(
     public fb:FormBuilder,
     public servicio: TareaService, 
+    private appComponent: AppComponent
   ){  
   //usuario
-  this.usuarioForm=this.fb.group({
-    id:['',Validators.required],
+  this.usuarioForm=this.fb.group({ 
     nombreUsuario:['',Validators.required],
-    clave:['',Validators.required],
-    tipodeusuario:['',Validators.required] 
+    clave:['',Validators.required] 
    });;
 
    this.verifiusuarioForm=this.fb.group({ 
@@ -60,17 +59,21 @@ export class IngresoComponent implements OnInit {
    });;
  
   }
-   
-
-
+    
      ngOnInit(): void {  
      }
    
-     verifiusuario():any{
-      let resp:any;
-      this.servicio.verifiusuario(this.verifiusuarioForm.value).subscribe(respuesta=>{ 
-          
-          alert(respuesta) 
+     verifiusuario():any{ 
+      this.servicio.verifiusuario(this.verifiusuarioForm.value).subscribe(respuesta=>{   
+          if(respuesta==true)
+          {
+            this.servicio.setShowTemplate(true); 
+            this.appComponent.get();
+            alert("bienn") 
+          }
+          else{ 
+            alert("mall") 
+          }
       });   
     }
     
@@ -79,6 +82,9 @@ export class IngresoComponent implements OnInit {
       alert(respuesta.message)
     }); 
       
+
+
+
     }
 
     enviarpersona():any{
@@ -90,7 +96,7 @@ export class IngresoComponent implements OnInit {
  
   
     enviarpaciente():any{ 
-      this.servicio.postusuario(this.pacienteForm.value).subscribe(respuesta=>{
+      this.servicio.postpaciente(this.pacienteForm.value).subscribe(respuesta=>{
         alert(respuesta.message)
       });   
     }
