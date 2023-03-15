@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AppComponent } from './../app.component';
 import { Component, OnInit } from '@angular/core';
 import { TareaService } from '../tarea.service';
@@ -13,17 +14,18 @@ import { Injectable } from '@angular/core';
 })
 export class IngresoComponent implements OnInit {
 
-  title="TAREAS";
+  title="TAREAS"; 
   usuarioForm: FormGroup;
   verifiusuarioForm: FormGroup;
   personaForm: FormGroup;
   pacienteForm: FormGroup;
   tarea:any;  
-  dato:any;
+  dato:any; 
 
   constructor(
     public fb:FormBuilder,
     public servicio: TareaService, 
+    private router: Router,
     private appComponent: AppComponent
   ){  
   //usuario
@@ -61,29 +63,31 @@ export class IngresoComponent implements OnInit {
   }
     
      ngOnInit(): void {  
+        
      }
    
      verifiusuario():any{ 
       this.servicio.verifiusuario(this.verifiusuarioForm.value).subscribe(respuesta=>{   
           if(respuesta==true)
-          {
-            this.servicio.setShowTemplate(true); 
-            this.appComponent.get();
-            alert("bienn") 
+          { 
+            this.servicio.setShowTemplate("true");  
+            this.appComponent.get(); 
+            this.router.navigate(['/', 'inicio']);
           }
           else{ 
             alert("mall") 
           }
-      });   
+      }); 
+      
+     
+
     }
     
      enviarusuario():any{
        this.servicio.postusuario(this.usuarioForm.value).subscribe(respuesta=>{
       alert(respuesta.message)
     }); 
-      
-
-
+       
 
     }
 

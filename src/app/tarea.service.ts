@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
- 
+import "rxjs/add/operator/map"; 
+
 export interface Message{
   source:string;
   content: string;
@@ -15,12 +16,13 @@ export interface Message{
 export class TareaService {  
   
   private api= 'https://sensortdd4iots-production.up.railway.app/';  
-  private showTemplate = false;
+  private apilocal= 'http://localhost:8080/';  
+  private showTemplate = "false";
   constructor(
     private http:HttpClient
   ) { }
 
-  setShowTemplate(showTemplate: boolean) {
+  setShowTemplate(showTemplate: string) {
     this.showTemplate = showTemplate;
   }
 
@@ -34,7 +36,7 @@ public getusuario():Observable<any>{
  }
 
 public getpulso():Observable<any>{
-  return this.http.get(this.api+"frecuenciacardiaca/find/hnQWN8qh0Di4L8eL4muq");
+  return this.http.get(this.apilocal+"frecuenciacardiaca/getData");
 }
 public getpaciente():Observable<any>{
   return this.http.get(this.api+"paciente/all");
@@ -53,4 +55,21 @@ public postpaciente(body:any):Observable<any>{
 public verifiusuario(body:any):Observable<any>{
   return this.http.post<string>(this.api+"usuario/VerificarUsuarios/",body);
 }
+public tipous(body:any):Observable<any>{
+  return this.http.post<string>(this.apilocal+"usuario/tipous/",body);
+}
+
+//GRAFICOS
+pulsoDatos()
+{
+  const url =
+  "https://api.openweathermap.org/data/2.5/forecast/daily?q=Barcelona,es&cnt=7&units=metric&appid=7dec162d0a4ae0d46539bf0a5c2e48e3";
+
+
+  let urlAPI='http://localhost:8080/frecuenciacardiaca/getData';
+  return this.http.get(url).map(res => res);
+
+
+}
+
 } 

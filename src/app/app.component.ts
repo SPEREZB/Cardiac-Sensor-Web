@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core'; 
 import { TareaService } from './tarea.service';
+import { Router } from '@angular/router';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
+import 'firebase/database'
 
 @Component({
   selector: 'app-root',
@@ -8,16 +12,21 @@ import { TareaService } from './tarea.service';
 })
 export class AppComponent{
   title = 'Sensor_Cardiaco'; 
-  showTemplate: boolean;
+  showTemplate= localStorage.getItem('showTemplate');
 
-  constructor(private servicio: TareaService) {}
+
+  constructor(private servicio: TareaService, private router: Router,) {}
    get():any
    {
     this.showTemplate = this.servicio.getShowTemplate();
+    localStorage.setItem('showTemplate', "true");
    }
-  /*
-  toggleTemplate() {
-    this.showTemplate = !this.showTemplate;
- }*/
- 
+   logout():any
+   {
+    this.servicio.setShowTemplate("false");  
+    this.showTemplate = this.servicio.getShowTemplate();
+    localStorage.setItem('showTemplate', "false");
+    this.router.navigate(['/', 'ingreso']);
+    
+   }
 }

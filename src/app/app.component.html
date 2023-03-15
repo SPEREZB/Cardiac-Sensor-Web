@@ -1,4 +1,4 @@
-<div *ngIf="showTemplate === true">
+<div *ngIf="showTemplate === 'true'">
   
 <header style="background:rgba(5, 168, 94, 0.9);">
     <nav class="menupr"  > 
@@ -11,10 +11,10 @@
             <a class="nav-link active" routerLink="medirfc">MEDIR FRECUENCIA CARDIACA</a>  
         </li>        
         <li>  
-            <a class="nav-link active" routerLink="diagnosticos">VER DIAGNOSTICOS</a>   
+            <a class="nav-link active" routerLink="graf">VER GRAFICOS</a>   
         </li>   
         <li> 
-            <a class="nav-link active" routerLink="ingreso">SALIR</a>   
+            <a class="nav-link active" routerLink="ingreso"  (click)="logout()">SALIR</a>   
             </li>         
         </ul>
         </div>
@@ -23,5 +23,6 @@
      
 </header>
  </div>
+ 
  <router-outlet style="background-color: white;"></router-outlet> 
  

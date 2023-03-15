@@ -20,40 +20,73 @@
     <header>
       <h4 class="header-title">FRECUENCIA OBTENIDA</h4>
       <div class="header-content">
-        <div class="container grid-2">
-          <h2 style="position: relative; left: 280px; top: 200px;">ID:</h2>
-          <h2 style="position: absolute; left: 600px; top: 350px;">Pulsaciones por segundo:</h2>
-          <h2 style="position: relative; left: 270px; top: 330px;">Fecha:</h2>
-          <h2 style="position: relative; left: 270px; top: 370px;">Riesgo de infarto:</h2>
-          <div class="column" *ngFor="let t of arr">
+        <div class="container grid-2"> 
+          <div class="datos"> 
+          <h2 style="  position: absolute;  left: 600px; top: 310px;">Pulsaciones por segundo:</h2>
+          <h2 style="   position: absolute; left: 600px; top: 400px;">Fecha:</h2>
+          <h2 style="   position: absolute; left: 600px; top: 480px;">Riesgo de infarto:</h2>
+          <div style="margin-left: -260px;
+           position: relative; top: -2px;" class="column">
             <br /><br />
           
-            <input
+            <input 
               class="resultados"
-              value="{{ t }}"
+              [value]="cantPulsaciones"
               style="
                 border: 2px solid #ccc;
-                padding: 10px;
+                padding: 10px;  
                 font-size: 18px;
-                width: 260px;
+                width: 130px;
                 height: 30px;
               "
               type="text"
               name="name"
             />
+
+
+            <input 
+            class="resultados"
+            [value]="fecha"
+            style="
+              border: 2px solid #ccc;
+              padding: 10px;  
+              font-size: 18px;
+              width: 130px;
+              height: 30px;
+            "
+            type="text"
+            name="name"
+          />
+
+
+          <input 
+          class="resultados"
+          [value]="riesgo"
+          style="
+            border: 2px solid #ccc;
+            padding: 10px;  
+            font-size: 18px;
+            width: 130px;
+            height: 30px;
+          "
+          type="text"
+          name="name"
+        />
  
           
           </div>
 
-          <div class="column" *ngFor="let a of audio">
+          <!-- <div style="margin-top: -50px; margin-left: -260px;" class="column" *ngFor="let a of audio">
             <h2>Audio obtenido:</h2>
-            <audio id="audio" controls>
+          <audio id="audio" controls>
               <source
                 src="https://sensortdd4iots-production.up.railway.app/paciente/download?key={{a.audio}}"
                 type="audio/mpeg"
               />
-            </audio>
-          </div>
+            </audio> 
+          </div> -->
+        </div>
+        
         </div>
       </div>
     </header>

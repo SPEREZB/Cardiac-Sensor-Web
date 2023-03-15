@@ -29,7 +29,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/angular/angular.min.js",
+            "src/assets/customJs/custom.js"]
+       
           },
           "configurations": {
             "production": {

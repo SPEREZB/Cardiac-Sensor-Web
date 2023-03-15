@@ -11,3 +11,20 @@ textarea {
 h1{ 
     font-family: 'Times New Roman', Times, serif; font-size: 70px; font-weight: bold; color: #000000; text-align: center;
 }
+
+.header-title {
+  font-size: 3.8rem;
+  line-height: 0.8;
+  color: var(--dark-one);
+  position: relative;
+  left: 40%;
+  top: 40px;
+
+  background-color: var(--main-color);
+  color: var(--light-one);
+  border-radius: 2rem;
+  font-size: 4rem; 
+  color: var(--light-one);
+  width: max-content; 
+  margin-bottom: 10px;
+}

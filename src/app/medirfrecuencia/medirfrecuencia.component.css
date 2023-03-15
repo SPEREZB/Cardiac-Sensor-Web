@@ -29,7 +29,7 @@
   font-size: 2rem; 
   color: var(--light-one);
   width: max-content;
-  background-color: #12cb56;
+  background-color: #74e79e;
   margin-bottom: 10px;
 }
 
@@ -44,3 +44,12 @@
   left: 270px;
   top: 60px;
 } 
+
+.datos{
+  margin-top: 150px; 
+           margin-left: 270px;
+          height: 400px; width: 500px;
+          font-weight: bold; 
+          border: 5px solid #26cd3c; border-radius: 20px;
+          background-color: #a9eb7d;
+}
