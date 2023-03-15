@@ -23,6 +23,7 @@ import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { ReportesComponent } from './reportes/reportes.component';
 
 @NgModule({
   declarations: [ 
@@ -32,7 +33,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     MedirfrecuenciaComponent,
     InicioComponent,
     DiagnosticosComponent,
-    GraficosComponent
+    GraficosComponent,
+    ReportesComponent
   ],
   imports: [
     BrowserModule, 

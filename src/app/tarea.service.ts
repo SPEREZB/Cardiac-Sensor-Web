@@ -41,6 +41,9 @@ public getpulso():Observable<any>{
 public getpaciente():Observable<any>{
   return this.http.get(this.api+"paciente/all");
 }
+public getrelacion():Observable<any>{
+  return this.http.get(this.api+"usuario/relacion");
+}
  
 //post
  public postusuario(body:any):Observable<any>{
@@ -60,16 +63,12 @@ public tipous(body:any):Observable<any>{
 }
 
 //GRAFICOS
-pulsoDatos()
+public pulsoDatos():Observable<any>
 {
   const url =
-  "https://api.openweathermap.org/data/2.5/forecast/daily?q=Barcelona,es&cnt=7&units=metric&appid=7dec162d0a4ae0d46539bf0a5c2e48e3";
+  "https://api.openweathermap.org/data/2.5/forecast/daily?q=Barcelona,es&cnt=7&units=metric&appid=7dec162d0a4ae0d46539bf0a5c2e48e3"; 
 
-
-  let urlAPI='http://localhost:8080/frecuenciacardiaca/getData';
-  return this.http.get(url).map(res => res);
-
-
+  return this.http.get(url); 
 }
 
 } 

@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Reporte de Pacientes</title> 
+  </head>
+  <body>
+    <h1>Reporte de Pacientes</h1>
+ 
+
+    <table id="table">
+      <thead>
+        <tr>
+          <th>ID_PACIENTE</th>
+          <th>ALTURA</th>
+          <th>GRUPO SANGUINEO</th>
+          <th>PESO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let t of reporte">
+          <td>{{ t.id }}</td>
+          <td>{{ t.altura }}</td>
+          <td>{{ t.gruposanguineo }}</td>
+          <td>{{ t.peso }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -56,8 +56,7 @@ export class IngresoComponent implements OnInit {
     peso:['',Validators.required],
     gruposanguineo:['',Validators.required], 
     nombreUsuario:['',Validators.required],
-    clave:['',Validators.required],
-    tipodeusuario:['',Validators.required] 
+    clave:['',Validators.required] 
    });;
  
   }

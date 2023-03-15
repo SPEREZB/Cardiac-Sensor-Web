@@ -1,3 +1,4 @@
+import { ReportesComponent } from './reportes/reportes.component';
 import { DiagnosticosComponent } from './diagnosticos/diagnosticos.component';
 import { TareasComponent } from './tareas/tareas.component';
  
@@ -13,9 +14,9 @@ import { GraficosComponent } from './graficos/graficos.component';
 const routes: Routes = [
   {path:"", redirectTo:"/ingreso",pathMatch:"full"},  
   {path:"ingreso",component:IngresoComponent},
-  {path:"medirfc",component:MedirfrecuenciaComponent},
-  {path:"diagnosticos",component:DiagnosticosComponent},
+  {path:"medirfc",component:MedirfrecuenciaComponent}, 
   {path:"graf",component:GraficosComponent},
+  {path:"report",component:ReportesComponent},
   {path:"inicio",component:InicioComponent} 
 ];
 
