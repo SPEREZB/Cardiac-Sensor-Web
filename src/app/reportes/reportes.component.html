@@ -3,20 +3,21 @@
     <title>Reporte de Pacientes</title> 
   </head>
   <body>
-    <h1>Reporte de Pacientes</h1>
- 
+    <h1>REPORTES</h1>
+  
 
+    <h2>PACIENTES</h2>
     <table id="table">
-      <thead>
+      <thead style="background-color: #86e460; color: rgb(0, 0, 0);">
         <tr>
-          <th>ID_PACIENTE</th>
-          <th>ALTURA</th>
-          <th>GRUPO SANGUINEO</th>
-          <th>PESO</th>
+          <th style="border-bottom: 1px solid #e5e5e5;  width: 50px;">ID</th>
+          <th style="border-bottom: 1px solid #e5e5e5; width: 90px;">ALTURA</th>
+          <th style="border-bottom: 1px solid #e5e5e5; width: 200px;">GRUPO SANGUÍNEO</th>
+          <th style="border-bottom: 1px solid #e5e5e5; width: 80px;">PESO</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let t of reporte">
+        <tr *ngFor="let t of reporte" style="border-bottom: 1px solid #e5e5e5;">
           <td>{{ t.id }}</td>
           <td>{{ t.altura }}</td>
           <td>{{ t.gruposanguineo }}</td>
@@ -24,5 +25,6 @@
         </tr>
       </tbody>
     </table>
+    <button type="button" class="btn-print" (click)="convertToPDF()">IMPRIMIR</button>
   </body>
-</html>
+</html> 

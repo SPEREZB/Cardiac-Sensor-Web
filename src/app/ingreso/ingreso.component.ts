@@ -74,7 +74,7 @@ export class IngresoComponent implements OnInit {
             this.router.navigate(['/', 'inicio']);
           }
           else{ 
-            alert("mall") 
+            alert("CREDENCIALES INCORRECTAS") 
           }
       }); 
       

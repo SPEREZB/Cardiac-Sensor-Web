@@ -1,24 +1,33 @@
+h3 {
+  text-align: center;
+  font-size: 75px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+main{
+ 
+}
+strong{
+  font-size: 20px;
+}
+
 .header-title {
   font-size: 3.8rem;
   line-height: 0.8;
   color: var(--dark-one);
   position: relative;
   left: 30%;
-  top: 100px;
-
+  top: 100px; 
   background-color: var(--main-color);
   color: var(--light-one);
   border-radius: 2rem;
   font-size: 4rem; 
   color: var(--light-one);
-  width: max-content; 
-  margin-bottom: 10px;
+  width: max-content;  
 }
 
 .header-content .container.grid-2 {
   grid-template-columns: 2.5fr 3.5fr;
-  min-height: calc(100vh - 6rem);
-  padding-bottom: 2.5rem;
+  min-height: calc(100vh - 6rem); 
   text-align: left;
 } 
 
@@ -28,8 +37,7 @@
   border-radius: 2rem;
   font-size: 2rem; 
   color: var(--light-one);
-  width: max-content;
-  background-color: #74e79e;
+  width: max-content; 
   margin-bottom: 10px;
 }
 
@@ -46,10 +54,10 @@
 } 
 
 .datos{
-  margin-top: 150px; 
+  margin-top: 50px; 
            margin-left: 270px;
           height: 400px; width: 500px;
           font-weight: bold; 
-          border: 5px solid #26cd3c; border-radius: 20px;
-          background-color: #a9eb7d;
+          border: 5px solid #6ae67b; border-radius: 20px;
+          background-color: #def7cd;
 }

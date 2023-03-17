@@ -38,7 +38,7 @@ import { ReportesComponent } from './reportes/reportes.component';
   ],
   imports: [
     BrowserModule, 
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+   // AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAnalyticsModule,
     AngularFirestoreModule,
     AppRoutingModule,

@@ -1,19 +1,50 @@
 h1 {
-    text-align: center;
-  }
-  table {
-    margin: 0 auto;
-    border: 2px solid black;
-    border-collapse: collapse;
-    width: 800px;
-  }
+  text-align: center;
+  font-size: 75px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
-  th {
-    border: 2px solid black;
-    background-color: #f2f2f2;
-    margin-right: 50px;
-  }
+h2 {
+  text-align: left;
+  font-size: 55px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: relative;
+  top: 30px;
+  margin-left: 800px;
+}
 
-  td {
-    border: 1px solid black;
-  }
+button{
+  background-color: #d94a4a; color: white; 
+    padding: 8px; border-radius: 4px; font-weight: bold;
+}
+
+table {
+  margin: 0 auto; 
+  border: 2px solid black;
+  border-radius: 200px;
+  border-collapse: collapse;
+  width: 500px;
+  font-size: 25px; 
+  border: 1px solid #e5e5e5; text-align: center; width: 50%; margin-left: 500px; margin-top: 50px;
+}
+
+th {
+  border: 3px solid black;
+  background-color: #86e460;
+  margin-right: 50px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+td {
+  border: 3px solid black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #d2fac2;
+}  
+
+.btn-print {
+  position: absolute;
+  right: 320px;
+  top: 320px;
+  font-size: 20px; 
+  font-family: 'Times New Roman', Times, serif;
+}

@@ -25,7 +25,7 @@ export class GraficosComponent implements OnInit {
     Chart.register(CategoryScale);
     this.servicio.getpulso().subscribe(data => {
    
-      let valores = data.map((data: { cantpulsaciones: any; }) => data.cantpulsaciones+4);  
+      let valores = data.map((data: { cantpulsaciones: any; }) => data.cantpulsaciones);  
       let fecha = data.map((data: { fechademedicion: any; }) => data.fechademedicion); 
 
       new Chart('canvas', {
@@ -35,7 +35,7 @@ export class GraficosComponent implements OnInit {
           datasets: [
             {
               data: valores,
-              borderColor: '#3cba9f',
+              borderColor: '#15d3bd',
               fill: false,
             } 
           ],
